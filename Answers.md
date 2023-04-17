@@ -62,7 +62,41 @@ We used the RANK() function to assign a rank to each row based on the order_date
 
 | customer_id | order_date               | product_name |
 | ----------- | ------------------------ | ------------ |
-| B           | 2021-01-11T00:00:00.000Z | sushi        |
 | A           | 2021-01-07T00:00:00.000Z | curry        |
+| B           | 2021-01-11T00:00:00.000Z | sushi        |
+
+
+**7. Which item was purchased just before the customer became a member?**
+
+![a7](https://user-images.githubusercontent.com/130475600/232551850-2f27403f-856e-42a6-9668-3591d92c0a8f.PNG)
+
+| customer_id | order_date               | product_name |
+| ----------- | ------------------------ | ------------ |
+| A           | 2021-01-01T00:00:00.000Z | sushi        |
+| A           | 2021-01-01T00:00:00.000Z | curry        |
+| B           | 2021-01-01T00:00:00.000Z | curry        |
+
+**8. What is the total items and amount spent for each member before they became a member?**
+
+![a8](https://user-images.githubusercontent.com/130475600/232554066-2f789f31-7036-4f2f-b839-c39612291830.PNG)
+
+| customer_id | total_items | total |
+| ----------- | ----------- | ----- |
+| A           | 2           | 25    |
+| B           | 2           | 40    |
+
+**9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?**
+
+![a9](https://user-images.githubusercontent.com/130475600/232558031-ff3a46ba-4444-450c-adec-5d3237dd3693.PNG)
+
+Since we already have a fixed price and id for each product on the menu, we can easily calculate the points using a CASE statement as seen in the code. 
+
+| customer_id | total_points |
+| ----------- | ------------ |
+| A           | 860          |
+| B           | 940          |
+| C           | 360          |
+
+**10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?**
 
 
