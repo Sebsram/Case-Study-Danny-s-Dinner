@@ -99,4 +99,9 @@ Since we already have a fixed price and id for each product on the menu, we can 
 
 **10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?**
 
+![a10](https://user-images.githubusercontent.com/130475600/232835855-0a41f3af-ae1c-4918-bc5b-2034c355e1b1.PNG)
 
+| customer_id | total_points |
+| ----------- | ------------ |
+| A           |1370          |
+| B           | 820         |
